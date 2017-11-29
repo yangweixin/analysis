@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: prod
+---
+spring:
+  profiles: dev
+server:
+  port: 8081
+loginuser:
+  username: yangweixin
+  password: 800820
+
+---
+spring:
+  profiles: prod
+server:
+  port: 8082
+loginuser:
+  username: leifeng
+  password: 123456
