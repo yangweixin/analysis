@@ -1,32 +1,35 @@
 package top.young.analysis.controller;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import top.young.analysis.dao.UserMapper;
+import top.young.analysis.util.RedisUtil;
 
 @RestController
-@RequestMapping("/mydb")
-public class DbController {
+@RequestMapping("/")
+public class TestController {
 
     @Autowired
     private UserMapper userMapper;
     @Autowired
-    private StringRedisTemplate redisTemplate;
+    private RedisUtil redisUtil;
 
     @RequestMapping("/getUser")
     public Object getUser(){
 
         Object obj = userMapper.getUser();
         return obj;
+    }
+
+    @RequestMapping("/setRedis/{key}/{value}")
+    public boolean setRedis(@PathVariable String key,@PathVariable String value){
+        return redisUtil.set(key,value);
+    }
+
+    @RequestMapping("/Redis/{key}")
+    public Object Redis(@PathVariable String key){
+        return redisUtil.get(key);
     }
 }
