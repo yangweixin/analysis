@@ -9,9 +9,12 @@ spring:
 spring:
   profiles: dev
   datasource:
-      url: jdbc:mysql://localhost:3306/test
+#      url: jdbc:mysql://localhost:3306/test
+#      username: root
+#      password: yang123456
+      url: jdbc:mysql://121.41.31.76:3306/yijiayou_rds2?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
       username: root
-      password: yang123456
+      password: yijiayou
       driver-class-name: com.mysql.jdbc.Driver
       #连接池配置
       max-idle: 5
