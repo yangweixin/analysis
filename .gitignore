@@ -1,6 +1,36 @@
+generated
+.settings
+target/
+!.mvn/wrapper/maven-wrapper.jar
+src/main/resources/rebel.xml
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
 .idea
-log
-logs
-out
-target
+*.iws
 *.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### ice ###
+src/main/java/EjiayouStationServer
+/generated/
+src/main/java/.depend
+/disconf/
+
+### JVM LOG ###
+*.log
