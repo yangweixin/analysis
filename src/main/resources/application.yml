@@ -65,6 +65,9 @@ mybatis:
   mapper-locations: classpath:top/young/analysis/mapper/*.xml
   config-location: classpath:mybatis-config.xml
 
+young:
+  test: youyoy
+
 
 
 

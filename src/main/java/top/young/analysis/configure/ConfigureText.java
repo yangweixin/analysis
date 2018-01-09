@@ -11,4 +11,9 @@ public class ConfigureText {
     public User user(){
         return new User("马加特","male");
     }
+
+    @Bean
+    public String message(){
+        return "this is young";
+    }
 }
