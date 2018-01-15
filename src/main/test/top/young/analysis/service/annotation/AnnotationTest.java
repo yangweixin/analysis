@@ -1,10 +1,11 @@
-package top.young.analysis.service;
+package top.young.analysis.service.annotation;
 
 import org.junit.Test;
 import top.young.analysis.annotation.SqlColumnCom;
 import top.young.analysis.annotation.SqlInt;
 import top.young.analysis.annotation.SqlTable;
 import top.young.analysis.annotation.SqlVarchar;
+import top.young.analysis.service.BaseTest;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
