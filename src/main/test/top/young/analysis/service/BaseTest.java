@@ -9,4 +9,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class BaseTest {
 
+    @Test
+    public void blank(){
+        System.out.println("this is BaseTest");
+    }
 }
