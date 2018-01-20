@@ -1,6 +1,7 @@
 package top.young.analysis.service.annotation;
 
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Value;
 import top.young.analysis.annotation.SqlColumnCom;
 import top.young.analysis.annotation.SqlInt;
 import top.young.analysis.annotation.SqlTable;
@@ -13,6 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AnnotationTest extends BaseTest {
+    @Value("${message")
+    private String message;
     @Test
     public void test() throws Exception{
         Class<?> clazz = Class.forName("top.young.analysis.entity.Student");
@@ -68,5 +71,10 @@ public class AnnotationTest extends BaseTest {
         }
 
         return comStr;
+    }
+
+    @Test
+    public void testConfig(){
+        System.out.println(message);
     }
 }
