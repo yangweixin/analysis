@@ -1,0 +1,10 @@
+${AnsiColor.GREEN}
+
+\\    / /
+ \\  / /  ___                __      ___
+  \\/ / //   ) ) //   / / //   ) ) //   ) )
+   / / //   / / //   / / //   / / ((___/ /
+  / / ((___/ / ((___( ( //   / /   //__
+
+${AnsiColor.BRIGHT_BLUE}
+::: Project (version:${application.version}) :::             ＼(^O^)／    Spring-Boot ${spring-boot.version}
