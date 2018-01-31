@@ -9,6 +9,5 @@ import java.util.Map;
 
 @Mapper
 public interface UserMapper {
-
     public Map<String,Object> getUser();
 }

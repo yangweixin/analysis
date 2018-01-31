@@ -1,6 +1,8 @@
+### IntelliJ IDEA ###
 .idea
-log
 logs
 out
 target
 *.iml
+target
+

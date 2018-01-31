@@ -18,29 +18,24 @@ public class RedisUtil {
     @Autowired
     private RedisTemplate redisTemplate;
 
-    public Long removeKeys(final String... keys){
-        Long cnt = 0L;
-        for (int i = 0; i < keys.length; i++) {
-            if(redisTemplate.delete(keys[i])){
-                cnt++;
-            }
+    public void removeKeys(final String... keys){
+        if(keys.length > 0){
+            redisTemplate.delete(keys);
         }
-        return cnt;
     }
 
-    public Long removePattern(final String pattern){
+    public void removePattern(final String pattern){
         Set set = redisTemplate.keys(pattern);
         if(set.size() > 0){
-            return redisTemplate.delete(set);
-        }else{
-            return 0L;
+            redisTemplate.delete(set);
         }
     }
 
-    public boolean  remove(final String key){
+    public boolean remove(final String key){
         try{
             if(exists(key)){
-                return redisTemplate.delete(key);
+                redisTemplate.delete(key);
+                return true;
             }
         }catch (Exception ex){
             logger.error("移除键异常",ex);
