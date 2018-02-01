@@ -23,13 +23,9 @@ public class TestController {
     private User user;
     @Autowired
     private String message;
-    @Value("${young.test}")
-    private String youngTest;
 
     @RequestMapping("/getUser")
     public Object getUser(){
-        System.out.println(message);
-        System.out.println(youngTest);
         Object obj = userMapper.getUser();
         return obj;
     }
