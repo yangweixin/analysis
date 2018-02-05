@@ -32,6 +32,6 @@ public class Application implements CommandLineRunner{
     @Override
     public void run(String... args) throws Exception {
 //        System.exit(testJob.run(args) ? 0 : -1);
-        readFileDemo.read(args);
+        readFileDemo.readV2(args);
     }
 }
